@@ -1,0 +1,34 @@
+
+<h1>検索結果 | CoworkingSpace's</h1>
+<div class="user_nav">
+  <% if user_signed_in?%>
+    
+      <div><%= render 'search_form'%></div>
+      <button class ="btn btn-primary"><%= link_to 'プロフィール変更', edit_user_registration_path%></button>
+      <button class ="btn btn-primary"><%= link_to 'ログアウト', destroy_user_session_path,method: :delete %></button>
+  
+      <% if current_user.role == 'admin' or current_user.role == 'register'%>
+        <button class ="btn btn-warning"><%= link_to '店舗登録', new_work_place_path %></button>
+      <% end %>
+  <% else%>
+  <button class ="btn btn-primary"><%= link_to '新規登録', new_user_registration_path%></button>
+  <button class ="btn btn-primary"><%= link_to 'ログイン', new_user_session_path%></button>
+  <% end %>
+</div>
+
+<div class="index_container">
+  <% @work_places.each do |w| %>
+    <div class="index_stores">
+      <p class="index_id">No.<%= w.id %>|</p>
+      <p class="index_name"><%= w.name %></p>
+      <p class="index_region"><%= w.region %></p>
+      <p  class="index_links"><%= link_to 'More・・・', w %></p>
+      <div id="app">
+        <% if current_user.role == 'admin' or current_user.id == w.user_id%>
+          <button class ="btn btn-success "><%= link_to '編集', edit_work_place_path(w) %></button>
+          <button class ="btn btn-success "><%= link_to '削除', work_place_path(w), method: :delete, data: { confirm: '本当に削除しますか?' } %></button>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
