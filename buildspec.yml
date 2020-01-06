@@ -13,7 +13,6 @@ phases:
       - update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
       - gem install bundler -v 1.17.2
       - bundle install
-      - cat /codebuild/output/tmp/scripts.sh
       - whoami
       - ls -la bin/rails
       - sudo bin/rails db:migrate RAILS_ENV=test 
