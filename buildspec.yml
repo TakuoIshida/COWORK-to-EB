@@ -12,7 +12,7 @@ phases:
       - apt-get -y install npm
       - update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
       - gem install bundler -v 1.17.2
-      - bundle install
+      - sudo bundle install
   build:
     commands:
       - echo Build started on `date`
