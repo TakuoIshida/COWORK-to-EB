@@ -13,6 +13,7 @@ phases:
       - update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
       - gem install bundler -v 1.17.2
       - bundle install
+      - bin/rails db:migrate RAILS_ENV=test 
   build:
     commands:
       - echo Build started on `date`
