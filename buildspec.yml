@@ -11,7 +11,7 @@ phases:
       - apt-get -y install nodejs-dev node-gyp libssl1.0-dev
       - apt-get -y install npm
       - update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
-      - gem install bundler
+      - gem install bundler -v 1.17.2
       - bundle install
   build:
     commands:
