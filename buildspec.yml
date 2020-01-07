@@ -12,20 +12,22 @@ phases:
     runtime-versions:
       ruby: 2.6
     commands:
-      - echo "mysql-server mysql-server/root_password password ${DB_ROOT_PASSWORD}" |debconf-set-selections
-      - echo "mysql-server mysql-server/root_password_again password ${DB_ROOT_PASSWORD}" |debconf-set-selections
+      # - echo "mysql-server mysql-server/root_password password ${DB_ROOT_PASSWORD}" |debconf-set-selections
+      # - echo "mysql-server mysql-server/root_password_again password ${DB_ROOT_PASSWORD}" |debconf-set-selections
       - echo install started on `date`
       - apt-get update
       - apt-get -y install nodejs
       - apt-get -y install nodejs-dev node-gyp libssl1.0-dev
       - apt-get -y install npm
-      - apt-get -y install mysql-server-5.7
-      - service mysqld start
-      - mysql -p${DB_ROOT_PASSWORD} -e "create database for rails_portfolio;"
-      - mysql -p${DB_ROOT_PASSWORD} -e "GRANT ALL ON *.* TO '${DB_USER}'@'%' IDENTIFIED BY '${DB_PASSWORD}';"
+      # - apt-get -y install mysql-server-5.7
+      # - service mysqld start
+      # - mysql -p${DB_ROOT_PASSWORD} -e "create database for rails_portfolio;"
+      # - mysql -p${DB_ROOT_PASSWORD} -e "GRANT ALL ON *.* TO '${DB_USER}'@'%' IDENTIFIED BY '${DB_PASSWORD}';"
       - update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
       - gem install bundler -v 1.17.2
       - bundle install
+      - ls -l db/test.sqlite3
+      - head db/test.sqlite3
       - bin/rails db:migrate RAILS_ENV=test 
   build:
     commands:
