@@ -19,7 +19,6 @@ phases:
       - apt-get -y install nodejs
       - apt-get -y install nodejs-dev node-gyp libssl1.0-dev
       - apt-get -y install npm
-      - apt-get -y install mysql-devel
       - apt-get -y install mysql-server-5.7
       - service mysqld start
       - mysql -p${DB_ROOT_PASSWORD} -e "create database for rails_portfolio;"
