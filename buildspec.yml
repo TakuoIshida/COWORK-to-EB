@@ -20,7 +20,7 @@ phases:
       - apt-get -y install nodejs-dev node-gyp libssl1.0-dev
       - apt-get -y install npm
       - apt-get install -y mysql-server-5.7
-      - sudo apt-get -y install mysql-devel
+      - apt-get -y install mysql-devel
       - sudo service mysqld start
       - mysql -p${DB_ROOT_PASSWORD} -e "create database for rails_portfolio;"
       - mysql -p${DB_ROOT_PASSWORD} -e "GRANT ALL ON *.* TO '${DB_USER}'@'%' IDENTIFIED BY '${DB_PASSWORD}';"
