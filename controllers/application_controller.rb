@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
       #   root_path
       # end
 
-    # def user_params
-    #     params.require(:user).permit(:email, :password, :role)
-    # end
+    def user_params
+        params.require(:user).permit(:email, :password, :role, :created_at, :updated_at)
+    end
 end
