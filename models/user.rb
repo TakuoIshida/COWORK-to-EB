@@ -7,4 +7,5 @@ class User < ActiveRecord::Base
   #pundit用にroleを分ける
   enum role: [:normal, :register, :admin]
   validates :role, inclusion: {in: %w(normal register), message: "%{value}は無効です"}
+  validates :email, uniqueness:{message:'はすでに使用されています'}
 end
