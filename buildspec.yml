@@ -26,9 +26,9 @@ phases:
       - update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
       - gem install bundler -v 1.17.2
       - bundle install
-      - bundle exec bin/rails db:create RAILS_ENV=test
-      - bundle exec bin/rails db:reset RAILS_ENV=test
-      - bundle exec bin/rails db:migrate RAILS_ENV=test
+      - bundle exec rails db:create RAILS_ENV=test
+      - bundle exec rails db:reset RAILS_ENV=test
+      - bundle exec rails db:migrate RAILS_ENV=test
   build:
     commands:
       - echo Build started on `date`
