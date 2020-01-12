@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.4'
+ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4'
@@ -104,4 +104,5 @@ gem 'jquery-rails'
 group :production do
     gem 'unicorn'
 end
-
+# 環境変数 for AWS
+gem 'dotenv-rails', require: 'dotenv/rails-now'

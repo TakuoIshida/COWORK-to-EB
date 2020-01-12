@@ -13,6 +13,6 @@ module COWORK
     # -- all .rb files in that directory are automatically loaded.
     config.i18n.default_locale = :ja
     config.time_zone ='Tokyo'
-    config.active_record.sqlite3.represent_boolean_as_integer = true
+    # config.active_record.sqlite3.represent_boolean_as_integer = true
   end
 end
