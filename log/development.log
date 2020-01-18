@@ -887,6 +887,7 @@ true by adding the following to your application.rb file:
 
   Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
  (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+
 DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
 set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
 boolean values and must have old data converted to 1 and 0 (its native boolean
@@ -938,7 +939,7 @@ Migrating to CreatePages (20191125141329)
   ↳ db/migrate/20191125141329_create_pages.rb:3
   [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191125141329"]]
   ↳ bin/rails:9
-  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
   ↳ bin/rails:9
 Migrating to AddRoleToUsers (20191125141739)
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
@@ -960,12 +961,12 @@ Migrating to AddAddressToWorkPlace (20191129135853)
   ↳ db/migrate/20191129135853_add_address_to_work_place.rb:5
   [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191129135853"]]
   ↳ bin/rails:9
-  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
   ↳ bin/rails:9
 Migrating to CreateComments (20191130133411)
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
   ↳ bin/rails:9
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "work_place_id" integer, "content" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "work_place_id" integer, "content" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
   ↳ db/migrate/20191130133411_create_comments.rb:3
   [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191130133411"]]
   ↳ bin/rails:9
@@ -995,3 +996,4 @@ true by adding the following to your application.rb file:
 
   Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
  (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+
