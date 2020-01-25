@@ -33,7 +33,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'mini_magick', '~> 4.8'
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -50,7 +50,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  # エラー画面をわかりやすく整形してくれる
+  # エラー画面をわかりやすく整えてくれる
   gem 'better_errors'
 
   # better_errorsの画面上にirb/pry(PERL)を表示する
@@ -100,8 +100,5 @@ gem 'ransack'
 #https://stackoverflow.com/questions/22582097/sprocketsfilenotfound-in-staticpageshome
 gem 'jquery-rails'
 
-group :production do
-    gem 'unicorn'
-end
 # 環境変数 for AWS
 gem 'dotenv-rails', require: 'dotenv/rails-now'
