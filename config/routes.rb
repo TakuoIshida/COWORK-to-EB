@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  resources :comments
- 
-  
   root 'pages#index'
 
   devise_for :users, at: 'users', controllers: {
@@ -10,7 +7,8 @@ Rails.application.routes.draw do
     passwords: 'users/passwords',
     confirmations: 'users/confirmations',
   }
-  
+  resources :comments
+ 
    resources :work_places do
     resources :comments, only:[:index,:new, :create]
   end

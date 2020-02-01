@@ -1263,3 +1263,1638 @@ true by adding the following to your application.rb file:
 
   Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
  (called from <top (required)> at /home/ec2-user/environment/cowork/app/models/user.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+Started GET "/" for 126.83.83.34 at 2020-02-01 00:12:29 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.4.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.4.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+better_errors (2.5.1) lib/better_errors/middleware.rb:59:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.0) lib/rack/method_override.rb:24:in `call'
+rack (2.1.0) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.0) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 126.83.83.34 at 2020-02-01 00:12:31 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.4.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.4.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+better_errors (2.5.1) lib/better_errors/middleware.rb:59:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.0) lib/rack/method_override.rb:24:in `call'
+rack (2.1.0) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.0) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateWorkPlaces (20191125134801)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "work_places" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "region" text, "tel" integer, "url" text, "image" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20191125134801_create_work_places.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191125134801"]]
+  ↳ bin/rails:9
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20191125140446)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20191125140446_devise_create_users.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20191125140446_devise_create_users.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/migrate/20191125140446_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191125140446"]]
+  ↳ bin/rails:9
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreatePages (20191125141329)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "pages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "index" varchar, "show" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20191125141329_create_pages.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191125141329"]]
+  ↳ bin/rails:9
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddRoleToUsers (20191125141739)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "role" integer DEFAULT 0[0m
+  ↳ db/migrate/20191125141739_add_role_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191125141739"]]
+  ↳ bin/rails:9
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddAddressToWorkPlace (20191129135853)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "work_places" ADD "address" text[0m
+  ↳ db/migrate/20191129135853_add_address_to_work_place.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "work_places" ADD "opentime" datetime[0m
+  ↳ db/migrate/20191129135853_add_address_to_work_place.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "work_places" ADD "closetime" datetime[0m
+  ↳ db/migrate/20191129135853_add_address_to_work_place.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191129135853"]]
+  ↳ bin/rails:9
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateComments (20191130133411)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "work_place_id" integer, "content" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20191130133411_create_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191130133411"]]
+  ↳ bin/rails:9
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-01-31 15:12:46.785279"], ["updated_at", "2020-01-31 15:12:46.785279"]]
+  ↳ bin/rails:9
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+Started GET "/" for 126.83.83.34 at 2020-02-01 00:12:57 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb___1799465130502781074_35564180 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (178.0ms)
+Completed 200 OK in 4184ms (Views: 4175.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.gif" for 126.83.83.34 at 2020-02-01 00:13:01 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/top.gif"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.0) lib/rack/method_override.rb:24:in `call'
+rack (2.1.0) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.0) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_in" for 126.83.83.34 at 2020-02-01 00:13:07 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (3.1ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (380.9ms)
+Completed 200 OK in 434ms (Views: 415.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/top.gif" for 126.83.83.34 at 2020-02-01 00:13:07 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/top.gif"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.0) lib/rack/method_override.rb:24:in `call'
+rack (2.1.0) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.0) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_in" for 126.83.83.34 at 2020-02-01 00:13:07 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (0.9ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (10.2ms)
+Completed 200 OK in 72ms (Views: 69.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 126.83.83.34 at 2020-02-01 00:13:12 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hJb43Kw/LLpnfh1fxhU88+mgD9zrhfGBV2wFHPOTXPXi9Wg7G5poreEtQZgp+bC+4RMGm/zyRxxgkEwLJW9hUw==", "user"=>{"email"=>"archersparadox.100@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "archersparadox.100@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.3ms)
+
+
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hJb43Kw/LLpnfh1fxhU88+mgD9zrhfGBV2wFHPOTXPXi9Wg7G5poreEtQZgp+bC+4RMGm/zyRxxgkEwLJW9hUw==", "user"=>{"email"=>"archersparadox.100@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (1.0ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (6.7ms)
+Completed 200 OK in 206ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 126.83.83.34 at 2020-02-01 00:13:17 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yESGeQT70fbqHLSFhe/ckKqJ8zf0XUvlk7A0l+V3V1+uJxaes16V4WxP6EJqA1Ddojr6cOMq/XikTH2AM4tq+Q==", "user"=>{"email"=>"archersparadox.100@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "archersparadox.100@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.1ms)
+
+
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yESGeQT70fbqHLSFhe/ckKqJ8zf0XUvlk7A0l+V3V1+uJxaes16V4WxP6EJqA1Ddojr6cOMq/XikTH2AM4tq+Q==", "user"=>{"email"=>"archersparadox.100@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (1.0ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (4.8ms)
+Completed 200 OK in 188ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 126.83.83.34 at 2020-02-01 00:13:29 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (1.0ms)
+  Rendered users/registrations/new.html.erb within layouts/devise (4.9ms)
+Completed 200 OK in 65ms (Views: 63.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 126.83.83.34 at 2020-02-01 00:13:43 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vHwtd7fWks8r1XXMa1oMmGrX9SVzxUMrCxFGMetuLmsnYRb5fY/X6VXGG3FZrSzL0I0hLeky2gmGDGfLW8ac6A==", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"normal"}, "commit"=>"アカウント登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/registrations/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (0.9ms)
+  Rendered users/registrations/new.html.erb within layouts/devise (4.5ms)
+Completed 200 OK in 200ms (Views: 35.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 126.83.83.34 at 2020-02-01 00:14:00 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lJDNMTGJMj9d/3JVPiVo49eipwwvdRQO7+qtKeMriPRuQLmEhUHBqYG+wRGNZc8s5I2MXbUSXWq8wL2+1SineA==", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"normal"}, "commit"=>"アカウント登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/registrations/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (0.9ms)
+  Rendered users/registrations/new.html.erb within layouts/devise (4.4ms)
+Completed 200 OK in 199ms (Views: 35.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 126.83.83.34 at 2020-02-01 00:14:09 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t9V4mRsyi6MRWPoSKMH3ICR5Gg79xj5y6IpWhiFGPaNbeVpWc0srNLQAb7JAUxnu5QC+5tXfe3UDB8jicmYTRA==", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"normal"}, "commit"=>"アカウント登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/registrations/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (0.9ms)
+  Rendered users/registrations/new.html.erb within layouts/devise (4.3ms)
+Completed 200 OK in 200ms (Views: 35.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for 126.83.83.34 at 2020-02-01 00:14:11 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (0.9ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (4.4ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 126.83.83.34 at 2020-02-01 00:14:22 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Un631i5jYQ175YKH0ncAdZN81JFX/FMyhxbg/ZMPNjpZe+nBtuXPuZRitk4zrAr0P6RvJBHpGPUtt/l6uw/b8w==", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.9ms)
+
+
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Un631i5jYQ175YKH0ncAdZN81JFX/FMyhxbg/ZMPNjpZe+nBtuXPuZRitk4zrAr0P6RvJBHpGPUtt/l6uw/b8w==", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (1.0ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (4.7ms)
+Completed 200 OK in 209ms (Views: 57.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 126.83.83.34 at 2020-02-01 00:14:29 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oYKN3MxZ7oICt7gwtmxKcACHifkQzWahgLjpsimI1Oyqh9PLVN9ANu0wjPlXt0DxrF8yTFbYLWYqGfA1AYg5JQ==", "user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test1@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.1ms)
+
+
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oYKN3MxZ7oICt7gwtmxKcACHifkQzWahgLjpsimI1Oyqh9PLVN9ANu0wjPlXt0DxrF8yTFbYLWYqGfA1AYg5JQ==", "user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (0.9ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (4.5ms)
+Completed 200 OK in 188ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+Started GET "/" for 126.83.83.34 at 2020-02-01 00:16:10 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb__4593888601037126957_43714680 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (251.1ms)
+Completed 200 OK in 373ms (Views: 365.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.gif" for 126.83.83.34 at 2020-02-01 00:16:11 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/top.gif"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.0) lib/rack/method_override.rb:24:in `call'
+rack (2.1.0) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.0) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_in" for 126.83.83.34 at 2020-02-01 00:16:14 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (2.5ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (274.0ms)
+Completed 200 OK in 326ms (Views: 305.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/images/top.gif" for 126.83.83.34 at 2020-02-01 00:16:14 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/top.gif"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.0) lib/rack/method_override.rb:24:in `call'
+rack (2.1.0) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.0) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_in" for 126.83.83.34 at 2020-02-01 00:16:14 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (1.0ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (10.5ms)
+Completed 200 OK in 94ms (Views: 92.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 126.83.83.34 at 2020-02-01 00:16:16 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (1.1ms)
+  Rendered users/registrations/new.html.erb within layouts/devise (4.4ms)
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 126.83.83.34 at 2020-02-01 00:16:28 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HSObxlYA1veYYRkRRVc9hs6hMHRC6CnCchuJ6PhO/Q0IjiR13fhdh/DuiV4INdjmTc75z9k14t0yon3Q5XH+3w==", "user"=>{"email"=>"aaaa@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"normal"}, "commit"=>"アカウント登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "aaaa@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "aaaa@gmail.com"], ["encrypted_password", "$2a$11$a0haxsxYfZoFOHcfOSuX2.l6aVZOtCH22wtWLtVcB3V3NonpNwKRK"], ["created_at", "2020-01-31 15:16:29.081936"], ["updated_at", "2020-01-31 15:16:29.081936"]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to https://31cc6e24c6974c489dcf29bdefb1f455.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 181ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/" for 126.83.83.34 at 2020-02-01 00:16:29 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb__4593888601037126957_69963298462000 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 57ms (Views: 55.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.gif" for 126.83.83.34 at 2020-02-01 00:16:29 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/top.gif"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.0) lib/rack/method_override.rb:24:in `call'
+rack (2.1.0) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.0) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_up" for 126.83.83.34 at 2020-02-01 00:16:31 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (1.0ms)
+  Rendered users/registrations/new.html.erb within layouts/devise (4.5ms)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.gif" for 126.83.83.34 at 2020-02-01 00:16:31 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/top.gif"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.0) lib/rack/method_override.rb:24:in `call'
+rack (2.1.0) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.0) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_up" for 126.83.83.34 at 2020-02-01 00:16:31 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (1.0ms)
+  Rendered users/registrations/new.html.erb within layouts/devise (8.9ms)
+Completed 200 OK in 86ms (Views: 84.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 126.83.83.34 at 2020-02-01 00:16:32 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb__4593888601037126957_69963282910240 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 39ms (Views: 37.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.gif" for 126.83.83.34 at 2020-02-01 00:16:32 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/top.gif"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.0) lib/rack/method_override.rb:24:in `call'
+rack (2.1.0) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.0) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 126.83.83.34 at 2020-02-01 00:16:32 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb__4593888601037126957_69963301222920 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 140ms (Views: 138.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.gif" for 126.83.83.34 at 2020-02-01 00:16:32 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/top.gif"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.0) lib/rack/method_override.rb:24:in `call'
+rack (2.1.0) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.0) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_in" for 126.83.83.34 at 2020-02-01 00:16:33 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (1.0ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (4.2ms)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 126.83.83.34 at 2020-02-01 00:16:33 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+Started GET "/images/top.gif" for 126.83.83.34 at 2020-02-01 00:16:33 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/top.gif"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.0) lib/rack/method_override.rb:24:in `call'
+rack (2.1.0) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.0) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (0.9ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (4.2ms)
+Completed 200 OK in 78ms (Views: 76.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 126.83.83.34 at 2020-02-01 00:16:39 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZTvyUoHIM3HpKgW6Ww1jXsVIYqvfIe0BXbi3qvBTdzz4+4tVbuik4UMdMPgUOLLYLgl8l1QsTmPgwKrsx9XCKQ==", "user"=>{"email"=>"aaaa@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "aaaa@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to https://31cc6e24c6974c489dcf29bdefb1f455.vfs.cloud9.ap-northeast-1.amazonaws.com/work_places.1
+Completed 302 Found in 176ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/work_places.1" for 126.83.83.34 at 2020-02-01 00:16:39 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as 
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (4.7ms)
+  [1m[36mWorkPlace Load (0.1ms)[0m  [1m[34mSELECT "work_places".* FROM "work_places"[0m
+  ↳ app/views/work_places/index.html.erb:20
+  Rendered work_places/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 67ms (Views: 48.6ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/sign_out" for 126.83.83.34 at 2020-02-01 00:16:52 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OaeF96Gw3gcX+TC3c4ebaJx4xGR6FfoO06tffMlAwBerEao7l1/bVCcU9VdvPlOwPnTC3rg3zA08puUpWkdPRw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to https://31cc6e24c6974c489dcf29bdefb1f455.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 126.83.83.34 at 2020-02-01 00:16:52 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb__4593888601037126957_69963296363140 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.gif" for 126.83.83.34 at 2020-02-01 00:16:52 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/top.gif"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.0) lib/rack/method_override.rb:24:in `call'
+rack (2.1.0) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.0) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_in" for 126.83.83.34 at 2020-02-01 00:16:54 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (0.9ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (4.1ms)
+Completed 200 OK in 51ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.gif" for 126.83.83.34 at 2020-02-01 00:16:54 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/top.gif"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.0) lib/rack/method_override.rb:24:in `call'
+rack (2.1.0) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.0) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_in" for 126.83.83.34 at 2020-02-01 00:16:54 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (0.9ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (10.4ms)
+Completed 200 OK in 72ms (Views: 70.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 126.83.83.34 at 2020-02-01 00:17:00 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cdJthbygxjRhMm1ITBUMwftJ4QRXJzyRZqGtnU45Y111o04jFmIngZIOrL7WP186Fp/vgJZFkucaKGAql2zWiw==", "user"=>{"email"=>"archersparadox.100@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "archersparadox.100@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+
+
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cdJthbygxjRhMm1ITBUMwftJ4QRXJzyRZqGtnU45Y111o04jFmIngZIOrL7WP186Fp/vgJZFkucaKGAql2zWiw==", "user"=>{"email"=>"archersparadox.100@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (0.9ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (4.1ms)
+Completed 200 OK in 199ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 126.83.83.34 at 2020-02-01 00:17:11 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pzdbI+G3e5d3qgAJM3WkboRGaLZOpAL+OeqmRZYrhNWjRniFS3WaIoSWwf+pX/eVaZBmMo/GrIhFY2vyT34xAw==", "user"=>{"email"=>"archersparadox.100@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "archersparadox.100@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+
+
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pzdbI+G3e5d3qgAJM3WkboRGaLZOpAL+OeqmRZYrhNWjRniFS3WaIoSWwf+pX/eVaZBmMo/GrIhFY2vyT34xAw==", "user"=>{"email"=>"archersparadox.100@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (1.0ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (4.9ms)
+Completed 200 OK in 188ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 126.83.83.34 at 2020-02-01 00:17:19 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gC9gSTjncJYer3qx8TCR62qgfiCajaNNcRRsFb/L3tmEXkPvkiWRI+2Tu0drGsIQh3ZwpFvvDTsNnaGiZp5rDw==", "user"=>{"email"=>"archersparadox.100@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "archersparadox.100@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.1ms)
+
+
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gC9gSTjncJYer3qx8TCR62qgfiCajaNNcRRsFb/L3tmEXkPvkiWRI+2Tu0drGsIQh3ZwpFvvDTsNnaGiZp5rDw==", "user"=>{"email"=>"archersparadox.100@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (0.9ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (4.0ms)
+Completed 200 OK in 184ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 126.83.83.34 at 2020-02-01 00:17:33 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wJATgJxET/u8Mr7yQzQVJBL9mRjTymcl8fL5dQx9wjjE4TAmNoauTk8OfwTZHkbf/yuXnBKoyVONezTC1Sh37g==", "user"=>{"email"=>"archersparadox.100@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "archersparadox.100@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.1ms)
+
+
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wJATgJxET/u8Mr7yQzQVJBL9mRjTymcl8fL5dQx9wjjE4TAmNoauTk8OfwTZHkbf/yuXnBKoyVONezTC1Sh37g==", "user"=>{"email"=>"archersparadox.100@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (1.0ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (4.2ms)
+Completed 200 OK in 199ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 126.83.83.34 at 2020-02-01 00:17:41 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3y+Okl+LSyo3XYGPepi8K7lTLQJ4vx1tBen/HNDRZ13bXq009Umqn8RhQHngsu/QVIUjhrndsxt5YDKrCYTSiw==", "user"=>{"email"=>"archersparadox.100@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "archersparadox.100@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.1ms)
+
+
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3y+Okl+LSyo3XYGPepi8K7lTLQJ4vx1tBen/HNDRZ13bXq009Umqn8RhQHngsu/QVIUjhrndsxt5YDKrCYTSiw==", "user"=>{"email"=>"archersparadox.100@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (1.0ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (4.3ms)
+Completed 200 OK in 188ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 126.83.83.34 at 2020-02-01 00:17:45 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QklyB5RzOgggD2OtvrQcz7ewnH8bnfR9nscQts2UgcBGOFGhPrHbvdMzolsknk80WmaS+9r/WgviTt0BFME0Fg==", "user"=>{"email"=>"archersparadox.100@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "archersparadox.100@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.1ms)
+
+
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QklyB5RzOgggD2OtvrQcz7ewnH8bnfR9nscQts2UgcBGOFGhPrHbvdMzolsknk80WmaS+9r/WgviTt0BFME0Fg==", "user"=>{"email"=>"archersparadox.100@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (0.9ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (4.1ms)
+Completed 200 OK in 187ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 126.83.83.34 at 2020-02-01 00:17:51 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::PasswordsController#new as HTML
+  Rendering users/passwords/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (1.1ms)
+  Rendered users/passwords/new.html.erb within layouts/devise (3.5ms)
+Completed 200 OK in 48ms (Views: 45.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 126.83.83.34 at 2020-02-01 00:17:57 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j237UcBJnaLVEpQ1TLsoUBIMwybwzmzLmqv/fOGN19SLHNj3aot8FyYuVcPWkXur/9rNojGswr3mIjLLONhiAg==", "user"=>{"email"=>"archersparadox.100@gmail.com"}, "commit"=>"パスワードの再設定方法を送信する"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "archersparadox.100@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/passwords/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (1.0ms)
+  Rendered users/passwords/new.html.erb within layouts/devise (3.1ms)
+Completed 200 OK in 43ms (Views: 34.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users/password" for 126.83.83.34 at 2020-02-01 00:18:01 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zKlW3W1vWbxO6hmOpLxJlcYCRkc36euH71Enb7wR4gTI2HV7x624Cb3W2Hg+lhpuK9RIw/aLRfGT2OrYZURX0g==", "user"=>{"email"=>"archersparadox.100@gmail.com"}, "commit"=>"パスワードの再設定方法を送信する"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "archersparadox.100@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/passwords/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (1.0ms)
+  Rendered users/passwords/new.html.erb within layouts/devise (3.3ms)
+Completed 200 OK in 53ms (Views: 46.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/sign_up" for 126.83.83.34 at 2020-02-01 00:18:04 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (1.0ms)
+  Rendered users/registrations/new.html.erb within layouts/devise (4.4ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 126.83.83.34 at 2020-02-01 00:18:13 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8tDXrLF/PVHa77LfbrVIjpgy18ZMLZ+sfjYflm5qziPOoT4E5hDpsf8QYUEz2fypPvNmLD7jPR3WAH9ClaQ1jQ==", "user"=>{"email"=>"archersparadox.100@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"register"}, "commit"=>"アカウント登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "archersparadox.100@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "role") VALUES (?, ?, ?, ?, ?)[0m  [["email", "archersparadox.100@gmail.com"], ["encrypted_password", "$2a$11$j2hRr74CdVxeTaKNeSl6HuL.5b9jbpKPDrGlu8TbPs0h.Dy4s4b9i"], ["created_at", "2020-01-31 15:18:13.276055"], ["updated_at", "2020-01-31 15:18:13.276055"], ["role", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to https://31cc6e24c6974c489dcf29bdefb1f455.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 168ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/" for 126.83.83.34 at 2020-02-01 00:18:13 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb__4593888601037126957_69963295899960 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.gif" for 126.83.83.34 at 2020-02-01 00:18:13 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/top.gif"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.0) lib/rack/method_override.rb:24:in `call'
+rack (2.1.0) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.0) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_up" for 126.83.83.34 at 2020-02-01 00:18:14 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (1.0ms)
+  Rendered users/registrations/new.html.erb within layouts/devise (4.4ms)
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.gif" for 126.83.83.34 at 2020-02-01 00:18:14 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/top.gif"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.0) lib/rack/method_override.rb:24:in `call'
+rack (2.1.0) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.0) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_up" for 126.83.83.34 at 2020-02-01 00:18:14 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (1.0ms)
+  Rendered users/registrations/new.html.erb within layouts/devise (10.9ms)
+Completed 200 OK in 73ms (Views: 71.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 126.83.83.34 at 2020-02-01 00:18:22 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (1.0ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (4.2ms)
+Completed 200 OK in 50ms (Views: 48.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 126.83.83.34 at 2020-02-01 00:18:26 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZiD5hBm+7ypbMZurQZQxixbd1vhl/ipRf8pBz/I/tUdb2+s20jJGnG/aRnCV1WktDZw8bjAr3p/k6SdQJnyK2A==", "user"=>{"email"=>"archersparadox.100@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "archersparadox.100@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to https://31cc6e24c6974c489dcf29bdefb1f455.vfs.cloud9.ap-northeast-1.amazonaws.com/work_places.2
+Completed 302 Found in 156ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/work_places.2" for 126.83.83.34 at 2020-02-01 00:18:26 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as 
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (2.3ms)
+  [1m[36mWorkPlace Load (0.1ms)[0m  [1m[34mSELECT "work_places".* FROM "work_places"[0m
+  ↳ app/views/work_places/index.html.erb:20
+  Rendered work_places/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 50ms (Views: 45.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/work_places/new" for 126.83.83.34 at 2020-02-01 00:18:28 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  Rendering work_places/new.html.erb within layouts/application
+  Rendered work_places/_form.html.erb (10.2ms)
+  Rendered work_places/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 75ms (Views: 60.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/work_places" for 126.83.83.34 at 2020-02-01 00:19:00 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O6mVnYhzSVtA5Dfaq49SCWFMOSbo4tVY8dvRA1I3G0EGeOH4ZyQoEtVtE3NJCYHHg9He2roCPza+HWWhlrxSjg==", "work_place"=>{"name"=>"店舗①", "region"=>"三田", "tel"=>"090123456", "address"=>"", "opentime(1i)"=>"1", "opentime(2i)"=>"1", "opentime(3i)"=>"1", "opentime(4i)"=>"10", "opentime(5i)"=>"00", "closetime(1i)"=>"1", "closetime(2i)"=>"1", "closetime(3i)"=>"1", "closetime(4i)"=>"17", "closetime(5i)"=>"00", "url"=>"", "user_id"=>"2"}, "commit"=>"登録"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/work_places_controller.rb:74
+  [1m[36mWorkPlace Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "work_places" WHERE "work_places"."tel" = ? LIMIT ?[0m  [["tel", 90123456], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:74
+  [1m[36mWorkPlace Create (0.2ms)[0m  [1m[32mINSERT INTO "work_places" ("name", "region", "tel", "url", "user_id", "created_at", "updated_at", "address", "opentime", "closetime") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "店舗①"], ["region", "三田"], ["tel", 90123456], ["url", ""], ["user_id", 2], ["created_at", "2020-01-31 15:19:00.311975"], ["updated_at", "2020-01-31 15:19:00.311975"], ["address", ""], ["opentime", "0001-01-01 00:41:01"], ["closetime", "0001-01-01 07:41:01"]]
+  ↳ app/controllers/work_places_controller.rb:74
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/work_places_controller.rb:74
+Redirected to https://31cc6e24c6974c489dcf29bdefb1f455.vfs.cloud9.ap-northeast-1.amazonaws.com/work_places/1
+Completed 302 Found in 12ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/work_places/1" for 126.83.83.34 at 2020-02-01 00:19:00 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  [1m[36mWorkPlace Load (0.2ms)[0m  [1m[34mSELECT  "work_places".* FROM "work_places" WHERE "work_places"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:45
+  Rendering work_places/show.html.erb within layouts/application
+  Rendered work_places/_form2.html.erb (1.8ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."work_place_id" = ?[0m  [["work_place_id", 1]]
+  ↳ app/views/work_places/show.html.erb:61
+  Rendered work_places/show.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 63ms (Views: 51.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/work_places" for 126.83.83.34 at 2020-02-01 00:19:18 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (2.3ms)
+  [1m[36mWorkPlace Load (0.1ms)[0m  [1m[34mSELECT "work_places".* FROM "work_places"[0m
+  ↳ app/views/work_places/index.html.erb:20
+  Rendered work_places/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 57ms (Views: 54.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/work_places?utf8=%E2%9C%93&q%5Bname_cont%5D=%E5%BA%97%E8%88%97&commit=%E5%BA%97%E8%88%97%E6%A4%9C%E7%B4%A2" for 126.83.83.34 at 2020-02-01 00:19:36 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"店舗"}, "commit"=>"店舗検索"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (2.4ms)
+  [1m[36mWorkPlace Load (0.2ms)[0m  [1m[34mSELECT "work_places".* FROM "work_places" WHERE "work_places"."name" LIKE '%店舗%'[0m
+  ↳ app/views/work_places/index.html.erb:20
+  Rendered work_places/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 44ms (Views: 40.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/work_places?utf8=%E2%9C%93&q%5Bname_cont%5D=%E4%B8%89%E7%94%B0&commit=%E5%BA%97%E8%88%97%E6%A4%9C%E7%B4%A2" for 126.83.83.34 at 2020-02-01 00:19:43 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"三田"}, "commit"=>"店舗検索"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (2.3ms)
+  [1m[36mWorkPlace Load (0.2ms)[0m  [1m[34mSELECT "work_places".* FROM "work_places" WHERE "work_places"."name" LIKE '%三田%'[0m
+  ↳ app/views/work_places/index.html.erb:20
+  Rendered work_places/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 55ms (Views: 51.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/work_places?commit=%E5%BA%97%E8%88%97%E6%A4%9C%E7%B4%A2&q%5Bname_cont%5D=%E4%B8%89%E7%94%B0&q%5Bs%5D=id+asc&utf8=%E2%9C%93" for 126.83.83.34 at 2020-02-01 00:19:46 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as HTML
+  Parameters: {"commit"=>"店舗検索", "q"=>{"name_cont"=>"三田", "s"=>"id asc"}, "utf8"=>"✓"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (2.6ms)
+  [1m[36mWorkPlace Load (0.2ms)[0m  [1m[34mSELECT "work_places".* FROM "work_places" WHERE "work_places"."name" LIKE '%三田%' ORDER BY "work_places"."id" ASC[0m
+  ↳ app/views/work_places/index.html.erb:20
+  Rendered work_places/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 45ms (Views: 41.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/work_places?commit=%E5%BA%97%E8%88%97%E6%A4%9C%E7%B4%A2&q%5Bname_cont%5D=%E4%B8%89%E7%94%B0&q%5Bs%5D=name+asc&utf8=%E2%9C%93" for 126.83.83.34 at 2020-02-01 00:19:48 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as HTML
+  Parameters: {"commit"=>"店舗検索", "q"=>{"name_cont"=>"三田", "s"=>"name asc"}, "utf8"=>"✓"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (2.3ms)
+  [1m[36mWorkPlace Load (0.2ms)[0m  [1m[34mSELECT "work_places".* FROM "work_places" WHERE "work_places"."name" LIKE '%三田%' ORDER BY "work_places"."name" ASC[0m
+  ↳ app/views/work_places/index.html.erb:20
+  Rendered work_places/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 44ms (Views: 40.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/work_places?utf8=%E2%9C%93&q%5Bname_cont%5D=&commit=%E5%BA%97%E8%88%97%E6%A4%9C%E7%B4%A2" for 126.83.83.34 at 2020-02-01 00:19:50 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>""}, "commit"=>"店舗検索"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (2.2ms)
+  [1m[36mWorkPlace Load (0.1ms)[0m  [1m[34mSELECT "work_places".* FROM "work_places"[0m
+  ↳ app/views/work_places/index.html.erb:20
+  Rendered work_places/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 54ms (Views: 51.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/work_places?utf8=%E2%9C%93&q%5Bname_cont%5D=&commit=%E5%BA%97%E8%88%97%E6%A4%9C%E7%B4%A2" for 126.83.83.34 at 2020-02-01 00:19:53 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>""}, "commit"=>"店舗検索"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (2.4ms)
+  [1m[36mWorkPlace Load (0.1ms)[0m  [1m[34mSELECT "work_places".* FROM "work_places"[0m
+  ↳ app/views/work_places/index.html.erb:20
+  Rendered work_places/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 43ms (Views: 40.0ms | ActiveRecord: 0.2ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
