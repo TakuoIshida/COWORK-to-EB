@@ -85,6 +85,6 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   
-  #confirm maste_key 
+  #confirm master_key 
   config.require_master_key = true
 end
