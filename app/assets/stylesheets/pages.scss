@@ -51,18 +51,7 @@ h1 {
   text-align: right;
 }
 
-#img{
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 400px;
-    margin: 10px auto;
-    text-align: center;
-}
-img{
-    position: absolute;
-    top: -50px;
-    bottom: -50px;
-    right: -50px;
-    left: -50px;
+img {
+  padding-top: 20px;
+  width: 100%;
 }
