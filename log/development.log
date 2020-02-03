@@ -5199,3 +5199,86 @@ Processing by WorkPlacesController#new as HTML
 Completed 200 OK in 78ms (Views: 64.5ms | ActiveRecord: 0.4ms)
 
 
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+Started POST "/work_places" for 126.83.83.34 at 2020-02-04 00:20:31 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by WorkPlacesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0wUA5STA43RVMq1KB2g99r2ErdOrKANACx6JP6L7Glvpu/R7obS1PK9WLhBONUo/PYs1PHCISxbfaLUsXslkYw==", "work_place"=>{"name"=>"店舗①", "region"=>"福岡", "tel"=>"11222222", "address"=>"", "opentime(1i)"=>"1", "opentime(2i)"=>"1", "opentime(3i)"=>"1", "opentime(4i)"=>"", "opentime(5i)"=>"", "closetime(1i)"=>"1", "closetime(2i)"=>"1", "closetime(3i)"=>"1", "closetime(4i)"=>"", "closetime(5i)"=>"", "url"=>"", "user_id"=>"1"}, "commit"=>"登録"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/work_places_controller.rb:74
+  [1m[36mWorkPlace Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "work_places" WHERE "work_places"."tel" = ? LIMIT ?[0m  [["tel", 11222222], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:74
+  [1m[36mWorkPlace Create (1.3ms)[0m  [1m[32mINSERT INTO "work_places" ("name", "region", "tel", "url", "user_id", "created_at", "updated_at", "address", "opentime", "closetime") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "店舗①"], ["region", "福岡"], ["tel", 11222222], ["url", ""], ["user_id", 1], ["created_at", "2020-02-03 15:20:31.385790"], ["updated_at", "2020-02-03 15:20:31.385790"], ["address", ""], ["opentime", "0000-12-31 14:41:01"], ["closetime", "0000-12-31 14:41:01"]]
+  ↳ app/controllers/work_places_controller.rb:74
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/work_places_controller.rb:74
+Redirected to https://31cc6e24c6974c489dcf29bdefb1f455.vfs.cloud9.ap-northeast-1.amazonaws.com/work_places/1
+Completed 302 Found in 84ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/work_places/1" for 126.83.83.34 at 2020-02-04 00:20:31 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  [1m[36mWorkPlace Load (0.2ms)[0m  [1m[34mSELECT  "work_places".* FROM "work_places" WHERE "work_places"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:45
+  Rendering work_places/show.html.erb within layouts/application
+  Rendered work_places/_form2.html.erb (200.8ms)
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."work_place_id" = ?[0m  [["work_place_id", 1]]
+  ↳ app/views/work_places/show.html.erb:61
+  Rendered work_places/show.html.erb within layouts/application (239.1ms)
+Completed 200 OK in 753ms (Views: 734.2ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/work_places/1" for 126.83.83.34 at 2020-02-04 00:20:42 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PXbBm+d2damdR1meIyGQPdOtbosa+kc1BlIUrLOkdGMHyDUFYgIj4Wcj2sRqfOf0U6L2ZMFaD2PSJCi/T5YKWw==", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  [1m[36mWorkPlace Load (0.1ms)[0m  [1m[34mSELECT  "work_places".* FROM "work_places" WHERE "work_places"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:104
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/work_places_controller.rb:105
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."work_place_id" = ?[0m  [["work_place_id", 1]]
+  ↳ app/controllers/work_places_controller.rb:105
+  [1m[36mWorkPlace Destroy (1.1ms)[0m  [1m[31mDELETE FROM "work_places" WHERE "work_places"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/work_places_controller.rb:105
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/work_places_controller.rb:105
+Redirected to https://31cc6e24c6974c489dcf29bdefb1f455.vfs.cloud9.ap-northeast-1.amazonaws.com/work_places
+Completed 302 Found in 16ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/work_places" for 126.83.83.34 at 2020-02-04 00:20:42 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (4.8ms)
+  [1m[36mWorkPlace Load (0.2ms)[0m  [1m[34mSELECT "work_places".* FROM "work_places"[0m
+  ↳ app/views/work_places/index.html.erb:20
+  Rendered work_places/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 120ms (Views: 114.5ms | ActiveRecord: 0.3ms)
+
+
