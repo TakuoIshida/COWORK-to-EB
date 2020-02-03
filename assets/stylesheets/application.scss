@@ -12,13 +12,13 @@
 
  */
  
- @import "bootstrap-sprockets";
- @import "bootstrap";
- @import "pages";
- @import "work_places";
- @import "devise";
- @import "comments";
-
+ @import "bootstrap-sprockets"
+ @import "bootstrap"
+ @import "pages"
+ @import "work_places"
+ @import "devise"
+ @import "comments"
+ 
  :root {
    // gray
    --main-font-color: #444;

@@ -5,10 +5,9 @@ ruby '2.6.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3','~> 1.3.6'
+
 #DB for production
-gem 'mysql2', '~> 0.5.2'
+# gem 'mysql2'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -16,7 +15,7 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-gem 'mini_racer', platforms: :ruby
+# gem 'mini_racer', platforms: :ruby
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -41,6 +40,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3','~> 1.3.6'
 end
 
 group :development do
@@ -68,7 +69,7 @@ end
 group :development, :test do
   gem 'bullet'
   #error対応
-# gem 'rb-readline'
+gem 'rb-readline'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -77,16 +78,16 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #img_uploader  CarrierWave
 gem 'carrierwave'
 #login
-gem 'devise'
+gem 'devise',"4.7.1"
 # gem 'sassc'
-gem 'sassc'
+gem 'sassc',"2.1.0"
 
 #deviseの日本語化
 gem 'devise-i18n'
 gem 'devise-i18n-views'
 
 #view画面のlayout
-gem "bootstrap-sass", ">= 3.4.1"
+gem 'bootstrap-sass', '>=3.2.0'
 
 
 #pagination
@@ -103,3 +104,7 @@ gem 'jquery-rails'
 
 # 環境変数 for AWS
 gem 'dotenv-rails', require: 'dotenv/rails-now'
+
+group :production do
+  gem 'pg'
+end

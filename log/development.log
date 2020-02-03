@@ -2898,3 +2898,1781 @@ true by adding the following to your application.rb file:
 
   Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
  (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateWorkPlaces (20191125134801)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "work_places" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "region" text, "tel" integer, "url" text, "image" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20191125134801_create_work_places.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191125134801"]]
+  ↳ bin/rails:9
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20191125140446)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20191125140446_devise_create_users.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20191125140446_devise_create_users.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/migrate/20191125140446_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191125140446"]]
+  ↳ bin/rails:9
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreatePages (20191125141329)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "pages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "index" varchar, "show" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20191125141329_create_pages.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191125141329"]]
+  ↳ bin/rails:9
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddRoleToUsers (20191125141739)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "role" integer DEFAULT 0[0m
+  ↳ db/migrate/20191125141739_add_role_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191125141739"]]
+  ↳ bin/rails:9
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddAddressToWorkPlace (20191129135853)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "work_places" ADD "address" text[0m
+  ↳ db/migrate/20191129135853_add_address_to_work_place.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "work_places" ADD "opentime" datetime[0m
+  ↳ db/migrate/20191129135853_add_address_to_work_place.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "work_places" ADD "closetime" datetime[0m
+  ↳ db/migrate/20191129135853_add_address_to_work_place.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191129135853"]]
+  ↳ bin/rails:9
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateComments (20191130133411)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "work_place_id" integer, "content" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20191130133411_create_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191130133411"]]
+  ↳ bin/rails:9
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-02-02 13:52:42.314611"], ["updated_at", "2020-02-02 13:52:42.314611"]]
+  ↳ bin/rails:9
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+Started GET "/" for 126.83.83.34 at 2020-02-02 22:53:06 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb__4498060004562623545_15010020 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (204.1ms)
+Completed 500 Internal Server Error in 242ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ec2-user/environment/COWORK/app/assets/config
+  /home/ec2-user/environment/COWORK/app/assets/images
+  /home/ec2-user/environment/COWORK/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/app/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/images
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/node_modules
+  /home/ec2-user/environment/vendor/assets/stylesheets):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= stylesheet_link_tag    'work_places', media: 'all', 'data-turbolinks-track': 'reload' %>
+   10:     <%= stylesheet_link_tag    'comments', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__1473827831476957666_19943700'
+Started GET "/" for 126.83.83.34 at 2020-02-02 22:53:09 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb__4498060004562623545_70277850349460 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ec2-user/environment/COWORK/app/assets/config
+  /home/ec2-user/environment/COWORK/app/assets/images
+  /home/ec2-user/environment/COWORK/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/app/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/images
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/node_modules
+  /home/ec2-user/environment/vendor/assets/stylesheets):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= stylesheet_link_tag    'work_places', media: 'all', 'data-turbolinks-track': 'reload' %>
+   10:     <%= stylesheet_link_tag    'comments', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__1473827831476957666_70277850408160'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+Started GET "/" for 126.83.83.34 at 2020-02-02 23:02:38 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb___4111924471587102347_14858560 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (203.2ms)
+Completed 500 Internal Server Error in 236ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ec2-user/environment/COWORK/app/assets/config
+  /home/ec2-user/environment/COWORK/app/assets/images
+  /home/ec2-user/environment/COWORK/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/app/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/images
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/node_modules
+  /home/ec2-user/environment/vendor/assets/stylesheets):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= stylesheet_link_tag    'work_places', media: 'all', 'data-turbolinks-track': 'reload' %>
+   10:     <%= stylesheet_link_tag    'comments', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___1670757300921804537_19854820'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+Started GET "/" for 126.83.83.34 at 2020-02-02 23:06:48 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb___3612874370711302703_23866100 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (200.7ms)
+Completed 500 Internal Server Error in 238ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ec2-user/environment/COWORK/app/assets/config
+  /home/ec2-user/environment/COWORK/app/assets/images
+  /home/ec2-user/environment/COWORK/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/app/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/images
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/node_modules
+  /home/ec2-user/environment/vendor/assets/stylesheets):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= stylesheet_link_tag    'work_places', media: 'all', 'data-turbolinks-track': 'reload' %>
+   10:     <%= stylesheet_link_tag    'comments', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__4362024444373457472_31579920'
+Started GET "/" for 126.83.83.34 at 2020-02-02 23:06:50 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb___3612874370711302703_47522340 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ec2-user/environment/COWORK/app/assets/config
+  /home/ec2-user/environment/COWORK/app/assets/images
+  /home/ec2-user/environment/COWORK/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/app/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/images
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/node_modules
+  /home/ec2-user/environment/vendor/assets/stylesheets):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= stylesheet_link_tag    'work_places', media: 'all', 'data-turbolinks-track': 'reload' %>
+   10:     <%= stylesheet_link_tag    'comments', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__4362024444373457472_69958511964840'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+Started GET "/" for 126.83.83.34 at 2020-02-02 23:17:44 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb___1175365745181616510_15613680 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (191.3ms)
+Completed 500 Internal Server Error in 214ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...otstrap-custom'": expected selector or at-rule, was "@import "bootst..."):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= stylesheet_link_tag    'work_places', media: 'all', 'data-turbolinks-track': 'reload' %>
+   10:     <%= stylesheet_link_tag    'comments', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/stylesheets/application.scss:18
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__4102869896631099774_24190400'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+Started GET "/" for 126.83.83.34 at 2020-02-02 23:42:43 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb___4157687947346611316_28870680 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (189.1ms)
+Completed 500 Internal Server Error in 227ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ec2-user/environment/COWORK/app/assets/config
+  /home/ec2-user/environment/COWORK/app/assets/images
+  /home/ec2-user/environment/COWORK/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/app/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/images
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/node_modules
+  /home/ec2-user/environment/vendor/assets/stylesheets):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= stylesheet_link_tag    'work_places', media: 'all', 'data-turbolinks-track': 'reload' %>
+   10:     <%= stylesheet_link_tag    'comments', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__2283272133005677239_31020220'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+Started GET "/" for 126.83.83.34 at 2020-02-02 23:43:50 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb___249292333609435062_44486460 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (204.4ms)
+Completed 500 Internal Server Error in 233ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ec2-user/environment/COWORK/app/assets/config
+  /home/ec2-user/environment/COWORK/app/assets/images
+  /home/ec2-user/environment/COWORK/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/app/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/images
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/node_modules
+  /home/ec2-user/environment/vendor/assets/stylesheets):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= stylesheet_link_tag    'work_places', media: 'all', 'data-turbolinks-track': 'reload' %>
+   10:     <%= stylesheet_link_tag    'comments', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__4448424207320231614_27837960'
+Started GET "/" for 126.83.83.34 at 2020-02-02 23:43:51 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb___249292333609435062_70086081774020 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ec2-user/environment/COWORK/app/assets/config
+  /home/ec2-user/environment/COWORK/app/assets/images
+  /home/ec2-user/environment/COWORK/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/app/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/images
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/node_modules
+  /home/ec2-user/environment/vendor/assets/stylesheets):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= stylesheet_link_tag    'work_places', media: 'all', 'data-turbolinks-track': 'reload' %>
+   10:     <%= stylesheet_link_tag    'comments', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__4448424207320231614_28883880'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+Started GET "/" for 126.83.83.34 at 2020-02-02 23:46:29 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb___1600890490734710349_19294700 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (207.7ms)
+Completed 500 Internal Server Error in 244ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ec2-user/environment/COWORK/app/assets/config
+  /home/ec2-user/environment/COWORK/app/assets/images
+  /home/ec2-user/environment/COWORK/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/app/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/images
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/node_modules
+  /home/ec2-user/environment/vendor/assets/stylesheets):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= stylesheet_link_tag    'work_places', media: 'all', 'data-turbolinks-track': 'reload' %>
+   10:     <%= stylesheet_link_tag    'comments', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__2401550466564838921_24093160'
+Started GET "/" for 126.83.83.34 at 2020-02-02 23:46:31 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb___1600890490734710349_35366760 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ec2-user/environment/COWORK/app/assets/config
+  /home/ec2-user/environment/COWORK/app/assets/images
+  /home/ec2-user/environment/COWORK/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/app/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/images
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/node_modules
+  /home/ec2-user/environment/vendor/assets/stylesheets):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= stylesheet_link_tag    'work_places', media: 'all', 'data-turbolinks-track': 'reload' %>
+   10:     <%= stylesheet_link_tag    'comments', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__2401550466564838921_36804160'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+Started GET "/" for 126.83.83.34 at 2020-02-02 23:48:10 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb___3362814935830496102_11491520 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (194.8ms)
+Completed 500 Internal Server Error in 228ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ec2-user/environment/COWORK/app/assets/config
+  /home/ec2-user/environment/COWORK/app/assets/images
+  /home/ec2-user/environment/COWORK/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/app/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/images
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/node_modules
+  /home/ec2-user/environment/vendor/assets/stylesheets):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= stylesheet_link_tag    'work_places', media: 'all', 'data-turbolinks-track': 'reload' %>
+   10:     <%= stylesheet_link_tag    'comments', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___1183998504095926244_24285660'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+Started GET "/" for 126.83.83.34 at 2020-02-02 23:48:38 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb__2506043419048942450_15188720 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (193.5ms)
+Completed 500 Internal Server Error in 222ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ec2-user/environment/COWORK/app/assets/config
+  /home/ec2-user/environment/COWORK/app/assets/images
+  /home/ec2-user/environment/COWORK/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/app/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/images
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/node_modules
+  /home/ec2-user/environment/vendor/assets/stylesheets):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= stylesheet_link_tag    'work_places', media: 'all', 'data-turbolinks-track': 'reload' %>
+   10:     <%= stylesheet_link_tag    'comments', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__546457874525289682_29960900'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+Started GET "/" for 126.83.83.34 at 2020-02-02 23:49:22 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb__2183741751818994970_44061380 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (193.7ms)
+Completed 500 Internal Server Error in 223ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ec2-user/environment/COWORK/app/assets/config
+  /home/ec2-user/environment/COWORK/app/assets/images
+  /home/ec2-user/environment/COWORK/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/app/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/images
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/node_modules
+  /home/ec2-user/environment/vendor/assets/stylesheets):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= stylesheet_link_tag    'work_places', media: 'all', 'data-turbolinks-track': 'reload' %>
+   10:     <%= stylesheet_link_tag    'comments', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___3940605993109367854_27334940'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+Started GET "/" for 126.83.83.34 at 2020-02-02 23:55:31 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb___1618687647842813505_22811580 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (173.8ms)
+Completed 500 Internal Server Error in 206ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ec2-user/environment/COWORK/app/assets/config
+  /home/ec2-user/environment/COWORK/app/assets/images
+  /home/ec2-user/environment/COWORK/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/app/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/images
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/node_modules
+  /home/ec2-user/environment/vendor/assets/stylesheets):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= stylesheet_link_tag    'work_places', media: 'all', 'data-turbolinks-track': 'reload' %>
+   10:     <%= stylesheet_link_tag    'comments', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___801651099156033058_32920340'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+Started GET "/" for 126.83.83.34 at 2020-02-02 23:56:44 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb___232745914584468459_23949840 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (189.0ms)
+Completed 500 Internal Server Error in 217ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ec2-user/environment/COWORK/app/assets/config
+  /home/ec2-user/environment/COWORK/app/assets/images
+  /home/ec2-user/environment/COWORK/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/app/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/images
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/node_modules
+  /home/ec2-user/environment/vendor/assets/stylesheets):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= stylesheet_link_tag    'work_places', media: 'all', 'data-turbolinks-track': 'reload' %>
+   10:     <%= stylesheet_link_tag    'comments', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___639242793448421106_32841820'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+Started GET "/" for 126.83.83.34 at 2020-02-03 00:04:55 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb__868529011872719472_14909000 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (183.1ms)
+Completed 500 Internal Server Error in 211ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ec2-user/environment/COWORK/app/assets/config
+  /home/ec2-user/environment/COWORK/app/assets/images
+  /home/ec2-user/environment/COWORK/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/app/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/images
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/node_modules
+  /home/ec2-user/environment/vendor/assets/stylesheets):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= stylesheet_link_tag    'work_places', media: 'all', 'data-turbolinks-track': 'reload' %>
+   10:     <%= stylesheet_link_tag    'comments', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__198420536903289173_19833880'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+Started GET "/" for 126.83.83.34 at 2020-02-03 19:41:29 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb___1928918831703224784_19078920 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (187.8ms)
+Completed 500 Internal Server Error in 220ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ec2-user/environment/COWORK/app/assets/config
+  /home/ec2-user/environment/COWORK/app/assets/images
+  /home/ec2-user/environment/COWORK/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/app/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/images
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/node_modules
+  /home/ec2-user/environment/vendor/assets/stylesheets):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= stylesheet_link_tag    'work_places', media: 'all', 'data-turbolinks-track': 'reload' %>
+   10:     <%= stylesheet_link_tag    'comments', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__44314841066361306_28495820'
+Started GET "/" for 126.83.83.34 at 2020-02-03 19:41:31 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb___1928918831703224784_40114840 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ec2-user/environment/COWORK/app/assets/config
+  /home/ec2-user/environment/COWORK/app/assets/images
+  /home/ec2-user/environment/COWORK/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/app/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/images
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/node_modules
+  /home/ec2-user/environment/vendor/assets/stylesheets):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= stylesheet_link_tag    'work_places', media: 'all', 'data-turbolinks-track': 'reload' %>
+   10:     <%= stylesheet_link_tag    'comments', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__44314841066361306_41489540'
+Started GET "/" for 126.83.83.34 at 2020-02-03 19:42:34 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb___1928918831703224784_70226660034000 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ec2-user/environment/COWORK/app/assets/config
+  /home/ec2-user/environment/COWORK/app/assets/images
+  /home/ec2-user/environment/COWORK/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/app/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/images
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/node_modules
+  /home/ec2-user/environment/vendor/assets/stylesheets):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= stylesheet_link_tag    'work_places', media: 'all', 'data-turbolinks-track': 'reload' %>
+   10:     <%= stylesheet_link_tag    'comments', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__44314841066361306_39434760'
+Started GET "/" for 126.83.83.34 at 2020-02-03 19:42:36 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb___1928918831703224784_40607060 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ec2-user/environment/COWORK/app/assets/config
+  /home/ec2-user/environment/COWORK/app/assets/images
+  /home/ec2-user/environment/COWORK/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/app/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/images
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/node_modules
+  /home/ec2-user/environment/vendor/assets/stylesheets):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= stylesheet_link_tag    'work_places', media: 'all', 'data-turbolinks-track': 'reload' %>
+   10:     <%= stylesheet_link_tag    'comments', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__44314841066361306_42525260'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+Started GET "/" for 126.83.83.34 at 2020-02-03 19:42:54 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb__2598241923999123165_15678920 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (183.3ms)
+Completed 500 Internal Server Error in 211ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ec2-user/environment/COWORK/app/assets/config
+  /home/ec2-user/environment/COWORK/app/assets/images
+  /home/ec2-user/environment/COWORK/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/app/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/images
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/node_modules
+  /home/ec2-user/environment/vendor/assets/stylesheets):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= stylesheet_link_tag    'work_places', media: 'all', 'data-turbolinks-track': 'reload' %>
+   10:     <%= stylesheet_link_tag    'comments', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__711647496149256964_20727980'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+Started GET "/" for 126.83.83.34 at 2020-02-03 19:43:58 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb__2241399943604849299_20671140 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (189.2ms)
+Completed 500 Internal Server Error in 217ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ec2-user/environment/COWORK/app/assets/config
+  /home/ec2-user/environment/COWORK/app/assets/images
+  /home/ec2-user/environment/COWORK/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/app/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/images
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/node_modules
+  /home/ec2-user/environment/vendor/assets/stylesheets):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= stylesheet_link_tag    'work_places', media: 'all', 'data-turbolinks-track': 'reload' %>
+   10:     <%= stylesheet_link_tag    'comments', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___1756293128143460708_30805040'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+Started GET "/" for 126.83.83.34 at 2020-02-03 19:48:51 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb___57134949210317531_24887900 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (185.9ms)
+Completed 500 Internal Server Error in 214ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ec2-user/environment/COWORK/app/assets/config
+  /home/ec2-user/environment/COWORK/app/assets/images
+  /home/ec2-user/environment/COWORK/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/app/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/images
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/node_modules
+  /home/ec2-user/environment/vendor/assets/stylesheets):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= stylesheet_link_tag    'work_places', media: 'all', 'data-turbolinks-track': 'reload' %>
+   10:     <%= stylesheet_link_tag    'comments', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___3943798510597935775_29643020'
+Started GET "/" for 126.83.83.34 at 2020-02-03 19:48:54 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb___57134949210317531_41103720 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ec2-user/environment/COWORK/app/assets/config
+  /home/ec2-user/environment/COWORK/app/assets/images
+  /home/ec2-user/environment/COWORK/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/app/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/images
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/node_modules
+  /home/ec2-user/environment/vendor/assets/stylesheets):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= stylesheet_link_tag    'work_places', media: 'all', 'data-turbolinks-track': 'reload' %>
+   10:     <%= stylesheet_link_tag    'comments', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___3943798510597935775_42534140'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+Started GET "/" for 126.83.83.34 at 2020-02-03 19:52:43 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb___4534393393603480398_19682000 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (178.4ms)
+Completed 500 Internal Server Error in 210ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ec2-user/environment/COWORK/app/assets/config
+  /home/ec2-user/environment/COWORK/app/assets/images
+  /home/ec2-user/environment/COWORK/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/app/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/images
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/bootstrap-sass-2.3.2.0/vendor/assets/stylesheets
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /home/ec2-user/environment/COWORK/vendor/bundle/ruby/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ec2-user/environment/COWORK/node_modules
+  /home/ec2-user/environment/vendor/assets/stylesheets):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= stylesheet_link_tag    'work_places', media: 'all', 'data-turbolinks-track': 'reload' %>
+   10:     <%= stylesheet_link_tag    'comments', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___1009613459530184165_30799540'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+Started GET "/" for 126.83.83.34 at 2020-02-03 19:55:15 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb__4450583863971709546_28534860 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (182.3ms)
+Completed 200 OK in 3996ms (Views: 3987.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 126.83.83.34 at 2020-02-03 19:55:19 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb__4450583863971709546_69960977689520 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.gif" for 126.83.83.34 at 2020-02-03 19:55:20 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/top.gif"):
+  
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:22:in `block in call'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.6.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.6.0/gems/rack-2.1.2/lib/rack/method_override.rb:24:in `call'
+vendor/bundle/ruby/2.6.0/gems/rack-2.1.2/lib/rack/runtime.rb:24:in `call'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.6.0/gems/rack-2.1.2/lib/rack/sendfile.rb:113:in `call'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_up" for 126.83.83.34 at 2020-02-03 19:55:25 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/devise
+  Rendered vendor/bundle/ruby/2.6.0/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (2.9ms)
+  Rendered users/registrations/new.html.erb within layouts/devise (342.5ms)
+Completed 200 OK in 396ms (Views: 377.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/top.gif" for 126.83.83.34 at 2020-02-03 19:55:26 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/top.gif"):
+  
+Started GET "/users/sign_up" for 126.83.83.34 at 2020-02-03 19:55:26 +0900
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:22:in `block in call'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.6.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.6.0/gems/rack-2.1.2/lib/rack/method_override.rb:24:in `call'
+vendor/bundle/ruby/2.6.0/gems/rack-2.1.2/lib/rack/runtime.rb:24:in `call'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.6.0/gems/rack-2.1.2/lib/rack/sendfile.rb:113:in `call'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/devise
+  Rendered vendor/bundle/ruby/2.6.0/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (0.9ms)
+  Rendered users/registrations/new.html.erb within layouts/devise (11.3ms)
+Completed 200 OK in 92ms (Views: 90.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 126.83.83.34 at 2020-02-03 19:55:35 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IbDWS1cts5+tW1PjNJrhfPZEsZ68ZC/jp56DdS9N0RwDa2d68EWk1Sjrr2alS1C4u0eZF1S0y7AurTi/2d19UQ==", "user"=>{"email"=>"archersparadox.100@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"register"}, "commit"=>"アカウント登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "archersparadox.100@gmail.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "role") VALUES (?, ?, ?, ?, ?)[0m  [["email", "archersparadox.100@gmail.com"], ["encrypted_password", "$2a$11$dpIA.mWk3hJ8QmWoCAjxIO/JlNGTtXJJIdQG9m7kiN2xqA4Gr251m"], ["created_at", "2020-02-03 10:55:36.002056"], ["updated_at", "2020-02-03 10:55:36.002056"], ["role", 1]]
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to https://31cc6e24c6974c489dcf29bdefb1f455.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 183ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/" for 126.83.83.34 at 2020-02-03 19:55:36 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+DEPRECATION WARNING: The asset "top.gif" is not present in the asset pipeline.Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from _app_views_pages_index_html_erb__4450583863971709546_69960986059480 at /home/ec2-user/environment/COWORK/app/views/pages/index.html.erb:8)
+  Rendered pages/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 103ms (Views: 101.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.gif" for 126.83.83.34 at 2020-02-03 19:55:36 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/top.gif"):
+  
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:22:in `block in call'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.6.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.6.0/gems/rack-2.1.2/lib/rack/method_override.rb:24:in `call'
+vendor/bundle/ruby/2.6.0/gems/rack-2.1.2/lib/rack/runtime.rb:24:in `call'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.6.0/gems/rack-2.1.2/lib/rack/sendfile.rb:113:in `call'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_in" for 126.83.83.34 at 2020-02-03 19:55:40 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered vendor/bundle/ruby/2.6.0/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (1.1ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (5.9ms)
+Completed 200 OK in 41ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 126.83.83.34 at 2020-02-03 19:55:40 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered vendor/bundle/ruby/2.6.0/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (0.9ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (4.5ms)
+Started GET "/images/top.gif" for 126.83.83.34 at 2020-02-03 19:55:40 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/top.gif"):
+  
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:22:in `block in call'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.6.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.6.0/gems/rack-2.1.2/lib/rack/method_override.rb:24:in `call'
+vendor/bundle/ruby/2.6.0/gems/rack-2.1.2/lib/rack/runtime.rb:24:in `call'
+vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.6.0/gems/rack-2.1.2/lib/rack/sendfile.rb:113:in `call'
+vendor/bundle/ruby/2.6.0/gems/railties-5.2.4.1/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.6.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Completed 200 OK in 75ms (Views: 73.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 126.83.83.34 at 2020-02-03 19:55:43 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8HrgbQ/QS8eleBuIfK6UZ4kv0kwh0yR1qhN1vZT7CJ7Jz/kCi2Mix940GtHNRi0y5edzCZskrILOtb+y69tiwQ==", "user"=>{"email"=>"archersparadox.100@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "archersparadox.100@gmail.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to https://31cc6e24c6974c489dcf29bdefb1f455.vfs.cloud9.ap-northeast-1.amazonaws.com/work_places.1
+Completed 302 Found in 162ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/work_places.1" for 126.83.83.34 at 2020-02-03 19:55:44 +0900
+Cannot render console from 126.83.83.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkPlacesController#index as 
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/work_places_controller.rb:116
+  Rendering work_places/index.html.erb within layouts/application
+  Rendered work_places/_search_form.html.erb (4.4ms)
+  [1m[36mWorkPlace Load (0.5ms)[0m  [1m[34mSELECT "work_places".* FROM "work_places"[0m
+  ↳ app/views/work_places/index.html.erb:20
+  Rendered work_places/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 69ms (Views: 50.5ms | ActiveRecord: 1.0ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/COWORK/app/models/user.rb:1)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
