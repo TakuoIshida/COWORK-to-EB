@@ -7,7 +7,7 @@ ruby '2.6.5'
 gem 'rails', '~> 5.2.4'
 
 #DB for production
-# gem 'mysql2'
+gem 'mysql2'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -106,5 +106,5 @@ gem 'jquery-rails'
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 
 group :production do
-  gem 'pg'
+  gem 'mysql2'
 end
